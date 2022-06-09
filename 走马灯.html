@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+	<style type="text/css">
+	
+		#goodnews{background-color:#FAC605;width:1200px;height: 30px;line-height: 20px;padding-top: 5px;}
+		form{text-align: center;}
+		input{background:transparent;border: none;font-size: 15px;font-weight: bold;font-family: 黑体}
+	</style>
+	<script type="text/javascript">
+	var msg="特大喜讯：热烈祝贺我院被重庆市教育局评为“重庆市民办教育十佳单位”！"
+	var interval=400;
+	var seq=0;
+		function txtScroll(){document.ScrollForm.txtText.value=msg.substring(seq,msg.length)+" "+msg;seq++;
+		if(seq>msg.length)
+		seq=0;
+		window.setTimeout("txtScroll();",interval);}
+	</script>
+</head>
+
+<body onload="txtScroll()">
+	<div id="goodnews">
+	<form id="form1" name="ScrollForm" method="post">
+		<label for="textfield"></label>
+		<input type="text" name="txtText" size="105" id="textfield">
+	</form>
+</div>
+</body>
+</html>
